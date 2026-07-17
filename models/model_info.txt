@@ -1,0 +1,13 @@
+Modello Selezionato: Multi-Layer Perceptron (MLP) Classifier
+Libreria: scikit-learn (sklearn.neural_network.MLPClassifier)
+
+Motivazione della scelta:
+Il modello è risultato il vincitore a seguito della valutazione sul Test Set, garantendo il minor numero di Falsi Negativi (1255) e massimizzando la metrica target (Recall: 80.31%, ROC-AUC: 0.8876).
+L'algoritmo ha sfruttato nativamente l'early stopping (autoregolarizzazione) per prevenire l'overfitting, performando in modo ottimale con l'architettura di default sui dati precedentemente standardizzati.
+
+Principali feature rilevate dalla Permutation Importance:
+1. Humidity3pm
+2. Humidity9am
+3. TempRange
+4. WindGustSpeed
+5. HumidityRise
