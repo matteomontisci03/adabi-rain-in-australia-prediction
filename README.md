@@ -1,5 +1,7 @@
 # Previsione delle Precipitazioni in Australia
 
+Portfolio page: https://matteomontisci03.github.io
+
 ## Project Overview
 Il progetto affronta un problema di classificazione binaria con l'obiettivo di prevedere se il giorno successivo pioverà in una data località australiana. In un'ottica di business agricolo, il modello mira a minimizzare i Falsi Negativi (mancata allerta pioggia), focalizzando l'ottimizzazione degli algoritmi sulla massimizzazione della metrica Recall.
 
