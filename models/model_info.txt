@@ -1,0 +1,23 @@
+Panoramica dei Modelli e Strategia di Selezione
+
+Nel corso del progetto sono stati testati e confrontati algoritmi di diversa complessità per risolvere il task di classificazione binaria, ottimizzando sempre per la metrica Recall.
+
+1. Logistic Regression (Baseline)
+- Scopo: Modello lineare di base, scelto per la sua totale interpretabilità (estrazione dei coefficienti).
+- Tuning: Iperparametri ottimizzati tramite 5-fold Cross-Validation sul Training Set.
+
+2. Random Forest Classifier (Il compromesso)
+- Scopo: Modello ensemble ad albero, scelto per la capacità di gestire relazioni non lineari e abbattere l'overfitting del singolo albero decisionale.
+- Risultati: Dopo il tuning, è risultato il modello più bilanciato in assoluto, registrando il miglior F1-Score sul Test Set (64.42%).
+
+3. Multi-Layer Perceptron / Rete Neurale (Modello Vincitore)
+- Scopo: Catturare dinamiche spaziali e non lineari complesse, sfruttando i segnali deboli (es. Longitudine).
+- Regolarizzazione: L'algoritmo ha performato in modo ottimale con l'architettura di default sui dati standardizzati, sfruttando nativamente la funzione di Early Stopping (autoregolarizzazione) per fermare l'addestramento al momento giusto e prevenire l'overfitting.
+- Scelta finale: Selezionato come modello definitivo per il business in quanto massimizza la capacità di intercettare i temporali (Recall: 80.31%, ROC-AUC: 0.8876), garantendo il minor numero di Falsi Negativi (1255).
+
+Principali feature rilevate dalla Permutation Importance (Rete Neurale):
+1. Humidity3pm (Umidità pomeridiana)
+2. Humidity9am (Umidità mattutina)
+3. TempRange (Escursione termica)
+4. WindGustSpeed (Velocità delle raffiche di vento)
+5. HumidityRise (Aumento dell'umidità in giornata)
